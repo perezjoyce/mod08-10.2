@@ -9,7 +9,7 @@
          	<div class="card">
          		<div class="card-header text-center">Registration Form</div>
          		<div class="card-body">
-         			<form action="process_register.php" method="POST">
+         			<!-- <form action="process_register.php" method="POST">
          				<div class="form-group">
          					<label>Username</label>
          					<input type="text" class="form-control" name="username">
@@ -22,7 +22,7 @@
 
          				<input type="submit" class="btn btn-outline-success" value="SUBMIT">
          				<input type="reset" class="btn btn-outline-warning" value="CLEAR">
-         			</form>
+         			</form> -->
          		</div>
          	</div>
          </div>

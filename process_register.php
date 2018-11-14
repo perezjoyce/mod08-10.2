@@ -21,6 +21,8 @@
 
 	//if successful, riderect user to index.php
 	if($result) {
-		header("Location: index.php");
+		echo "Success";
+	} else {
+		echo false;
 	}
 ?>
