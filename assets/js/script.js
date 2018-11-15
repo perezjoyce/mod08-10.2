@@ -78,6 +78,80 @@ $(document).ready(()=> {
 
 	// REGISTRATION
 	$("#btn_register").click(()=>{
+		
+		//get values
+		let username = $("#username").val();
+		let password = $("#password").val();
+		let cpass = $("#cpass").val();
+		let countU = username.length;
+		let countP = password.length;
+
+		let error_flag = 0;
+
+		//username verification
+		if(username == ""){
+			$("#username").next().html("Username is required!");
+			error_flag = 1;
+		} else if (countU < 5) {
+			$("#username").next().html("Username should at least 5 characters!");
+			error_flag = 1;
+		} else {
+			$("#username").next().html("");
+		}
+
+		//password verification
+		if(password == ""){
+			$("#password").next().html("Password is required!");
+			error_flag = 1;
+		} else if (countP < 8) {
+			$("#password").next().html("Password should have more than 8 characters!");
+			error_flag = 1;
+		} else {
+			$("#password").next().html("");
+		}
+
+		//password and cpass verification
+		if (password !== cpass) {
+			$("#cpass").next().html("Password don't match!");
+			error_flag = 1;
+		} else {
+			$("#password").next().html("");
+		}
+
+		//assess if tama na ang lahat using ajax
+		if(error_flag == 0) {
+			
+			//ONCE navalidate na walang error  na, ipapasa kay process_login.php
+			$.ajax({
+				"url": "process_register.php",
+				"data": {"username" : username,
+						  "password" : password},
+				"type": "POST",
+				"success": (dataFromPHP) => {
+					if(dataFromPHP == "Success") {
+
+						// got to register.php?
+						window.location = "users.php";
+					} else {
+
+						$("#error_message").css("color", "red");
+						$("#error_message").html("test"); // Invalid username/password
+					}
+				}
+
+			});
+
+		} 
+
+	});
+
+
+
+
+
+	// UPDATE
+
+	$("#btn_edit").click(()=>{
 		//verify
 		// alert();
 
@@ -149,7 +223,7 @@ $(document).ready(()=> {
 						// $("#error_message").html(dataFromPHP); // Success
 
 						//submit data to form.php?
-						// $("#form_register").submit();
+						// $("#form_edit").submit();
 
 						// got to register.php?
 						window.location = "users.php";
@@ -170,39 +244,5 @@ $(document).ready(()=> {
 
 
 
-
-
-
-
-
-
-
-	// // REGISTRATION
-	// $("#btn_register").click(()=>{ 
-
-	// 	let username = $("#username").val();
-	// 	let password = $("#password").val();
- //        let cpass = $("#cpass").val();
-
-
- //        $.ajax({
- //            "url" : "process_username.php",
- //            "data" : {"username" : username},
- //            "type" : "POST",
- //            "success" :(dataFromPHP)=> {
- //                if(dataFromPHP == true) {
- //                	$("#username").next().html("Username is required!");
- //                } else if (dataFromPHP == false){
- //                    $("#username").next().html("Username should be 5 to 8 characters.");
- //                } else {
- //                   $("#username").next().empty("");
- //                }
- //            }
- //        });  
-
-
-
-
-	// });
 
 }); 

@@ -9,8 +9,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-3"></div>
-         <div class="col-6">
+         <div class="col-12">
          	<div class="card">
          		<div class="card-header text-center">Users</div>
          		<div class="card-body">

@@ -16,7 +16,7 @@
          	<div class="card">
          		<div class="card-header text-center">Edit User</div>
          		<div class="card-body">
-         			<form action="process_update.php" method="POST">
+         			<form action="process_update.php" method="POST" id="form_edit">
 
          			<?php while($row = mysqli_fetch_assoc($result)){ ?>
 
@@ -29,17 +29,27 @@
          				<div class="form-group">
          					<label>Username</label>
          					<!-- call value attribute -->
-         					<input type="text" class="form-control" name="username" value="<?= $row['username']?>">
-
+         					<input type="text" class="form-control" id="username" name="username" value="<?= $row['username']?>">
+                        <p class="validation text-danger"></p>
          				</div>
 
-         				<div class="form-group">
-         					<label>Password</label>
-         					<input type="password" class="form-control" name="password">
-         				</div>
+                             				<div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                           <p class="validation text-danger"></p>
+                     </div>
 
-         				<input type="submit" class="btn btn-outline-success" value="SUBMIT">
-         				<input type="reset" class="btn btn-outline-warning" value="CLEAR">
+                     <div class="form-group">
+                         <label>Confirm Password</label>
+                         <input type="password" class="form-control" id="cpass" name="cpass">
+                         <p class="validation text-danger"></p>
+                     </div>
+
+                      <p id="error_message"></p>
+
+
+         				<button type="button" class="btn btn-outline-success" id="btn_edit">EDIT</button>
+                     <input type="reset" class="btn btn-outline-warning" value="CLEAR">
 
          			<?php } ?>
          			</form>

@@ -11,6 +11,8 @@
                     <!-- after submitTing the form, it should go to users.php -->
                     <!-- change name to id -->
          			<form action="process_register.php" method="POST" id="form_register">
+
+                    
          				<div class="form-group">
          					<label>Username</label>
                             <!-- change name to id -->
