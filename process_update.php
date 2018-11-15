@@ -15,6 +15,8 @@
 
 	if($result) {
 		header ("Location: users.php");
+	} else {
+		echo false;
 	}
 
 

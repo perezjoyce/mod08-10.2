@@ -33,9 +33,9 @@
                         <p class="validation text-danger"></p>
          				</div>
 
-                             				<div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
                            <p class="validation text-danger"></p>
                      </div>
 
@@ -49,7 +49,7 @@
 
 
          				<button type="button" class="btn btn-outline-success" id="btn_edit">EDIT</button>
-                     <input type="reset" class="btn btn-outline-warning" value="CLEAR">
+                     <input type="reset" class="btn btn-outline-warning" id="btn_clear" value="CLEAR CHANGES">
 
          			<?php } ?>
          			</form>

@@ -30,7 +30,7 @@
                         <!-- if input type is submit, this will automatically submit input to users.php hence change this to button, type to button and remove value SO THAT you can employ validation -->
                         <!-- indicate id for button -->
          				<button type="button" class="btn btn-outline-success" id="btn_login">SUBMIT</button>
-         				<input type="reset" class="btn btn-outline-warning" value="CLEAR">
+         				<input type="reset" class="btn btn-outline-warning" id="btn_clear" value="CLEAR">
          			</form>
          		</div>
          	</div>
