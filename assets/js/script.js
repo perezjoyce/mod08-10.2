@@ -76,7 +76,7 @@ $(document).ready(()=> {
 
 
 
-	// REGISTER
+	// REGISTRATION
 	$("#btn_register").click(()=>{
 		//verify
 		// alert();
@@ -152,7 +152,7 @@ $(document).ready(()=> {
 						// $("#form_register").submit();
 
 						// got to register.php?
-						header("Location: register.php");
+						window.location = "users.php";
 					} else {
 
 						
