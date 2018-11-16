@@ -1,4 +1,4 @@
- <footer class="navbar navbar-expand-lg navbar-dark bg-dark text-light py-5 mt-5 fixed-bottom">
+ <footer class="navbar navbar-expand-lg navbar-dark bg-dark text-light py-5 mt-5">
   
   <div class="container mb-5">
     <div class="d-flex flex-row flex-fill">
@@ -32,7 +32,7 @@
 
 </footer>
 
-<footer class="navbar navbar-expand-lg navbar-dark bg-secondary bottom justify-content-center text-light fixed-bottom">
+<footer class="navbar navbar-expand-lg navbar-dark bg-secondary bottom justify-content-center text-light">
     <a>Copyright &copy; Joyce Perez</a>
 </footer>
 

@@ -1,0 +1,30 @@
+
+html {
+    /* font size root */
+    font-size: 12px;
+}
+
+/* the following adjusts according to the root */
+h1 {
+    /* 21px */
+    font-size: 1.8rem; 
+}
+
+h2 {
+    /* 18 px */
+    font-size: 1.5rem;
+}
+
+    /* 15px */
+h3 {
+    font-size: 1.25rem;
+}
+
+
+
+
+
+a.edit_user:not([href]) {
+    color: #007bff;
+    cursor: pointer;
+}

@@ -159,10 +159,20 @@ $(document).ready(()=> {
 	});
 
 
-
+	// UPDATE USER
+	$('.edit_user').on('click', function(){
+		const userEditModalUrl = $(this).data('url');
+		const userId = $(this).data('id');
+		$.get(userEditModalUrl, function(response){
+			//put edit_user.php content inside modal-body
+			$('#editUserModal .modal-body').html(response);
+			$('#editUserModal').modal();
+		})
+	});
 
 	// UPDATE
-	$("#btn_edit").click(()=>{
+	// template for dynamically added element
+	$('body').on('click', '#btn_edit', ()=>{
 		
 		//get values
 		let username = $("#username").val();
