@@ -4,7 +4,7 @@
 
 	//get variables from edit_user
 	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$password = sha1($_POST['password']);
 	$id = $_POST['id']; // HIDDEN INPUT FIELD IN EDIT_USER.PHP
 
 	// indicate WHERE 
@@ -19,6 +19,7 @@
 		echo false;
 	}
 
+	//note: in practice, don't allow users to change username and if you do, study process_register.php to edit this code and its pair in script.js
 
 
 ?>

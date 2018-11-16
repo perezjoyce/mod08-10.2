@@ -128,14 +128,16 @@ $(document).ready(()=> {
 						  "password" : password},
 				"type": "POST",
 				"success": (dataFromPHP) => {
-					if(dataFromPHP == "Success") {
-
-						// got to register.php?
+					if(dataFromPHP == "userExists") {
+						$("#error_message").css("color", "red");
+						$("#error_message").html("Username is already taken."); 
+						
+					} else if (dataFromPHP == "success") {
+						// proceed to registration
 						window.location = "users.php";
 					} else {
-
 						$("#error_message").css("color", "red");
-						$("#error_message").html("test"); // Invalid username/password
+						$("#error_message").html("Error encountered. Pls try again."); 
 					}
 				}
 
